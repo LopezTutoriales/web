@@ -87,17 +87,17 @@
 				system = 0;
 				out = "Unsupported device<br>";
 				if (uagent == mobile) {
-					out = 'Please uncheck "Request Mobile Sites" in the Menu tab (bottom right corner)<br>';
+					out = 'Por favor, desmarca "Version para moviles" en el menu (esquina inferior derecha)<br>';
 				}
 			}
 
 			if(system){
 				if(supported_regions.indexOf(region) == -1 || system==999) {
-					out += "Unsupported region<br>";
+					out += "Region no soportada<br>";
 					system=0;
 				}
 				if(supported_versions.indexOf(version) == -1) {
-					out += "Unsupported version<br>";
+					out += "Version de sistema no soportada<br>";
 					system=0;
 				}
 				if(region=="" || version=="") {
@@ -106,7 +106,7 @@
 				}
 			}
 			document.getElementById("output").innerHTML = out+"<br><br><br>";
-			if(system==0) document.getElementById("button").innerHTML = "I AM ERROR";
+			if(system==0) document.getElementById("button").innerHTML = "ERROR";
 		}
 		function go() {
 			if (system == 1) {
@@ -152,7 +152,7 @@
 				window.location.replace("1114_ot.html");
 			}
 			else {
-				document.getElementById("output").innerHTML = "WHAT IS WRONG WITH THE ELF<br><br><br><br>";
+				document.getElementById("output").innerHTML = "QUE ESTA MAL CON EL ELF<br><br><br><br>";
 			}
 		}
 	</script>
@@ -160,7 +160,7 @@
 <body onload="setup()">
 	<div id="output">THE BURNT TOWER WAS BURNT OFF BY FIRE
 	</div>
-	<button id="button" onclick="go()">PROCEED TO HAXX
+	<button id="button" onclick="go()">PROCEDER AL HAXX
 	</button>
 </body>
 </html>
